@@ -96,12 +96,21 @@ function EmpezarRonda (seleccionJugador, seleccionCPU) {
 
 function Juego () {
 
-    for (let ronda = 0; ronda < 5; ronda++) {
+    for (let ronda = 0; ronda < 10; ronda++) {
 
-        const seleccionJugador = prompt ("Seleccione su jugada entre piedra, papel ó tijeras?").toLowerCase();
+        const seleccionJugador = prompt ("Momento de elegir:\n¿Piedra, Papel ó Tijeras?").toLowerCase ();
         const seleccionCPU = JuegaCPU ();
         let resultadoRonda = EmpezarRonda (seleccionJugador, seleccionCPU);
+        console.log ("Comienza Ronda");
         console.log (resultadoRonda);
+        console.log ("Finaliza Ronda");
+        console.log ("              ");
+
+        if (puntajeJugador === 5 || puntajeCPU === 5) {
+
+            break;
+            
+        }
 
     }
 
