@@ -131,8 +131,6 @@ function Juego () {
 
         if (puntajeJugador >= 5 || puntajeCPU >= 5) {
 
-            console.log ("El juego ha terminado.");
-            alert ("Juego terminado.");
             break;
             
         }
@@ -143,22 +141,29 @@ function Juego () {
 
 }
 
-// Falta agregar validacion de mensaje al ganador/perdedor.
-
-// if (puntajeJugador >= 5 && puntajeCPU <= 5) {
-
-//     console.log ("El juego ha terminado.");
-//     console.log (jugadorGanaJuego);
-//     alert ("Juego terminado.");
-    
-// }
-
-// else if (puntajeCPU >= 5 && puntajeJugador <= 5) {
-
-//     console.log ("El juego ha terminado.");
-//     console.log (CPUGanaJuego);
-//     alert ("Juego terminado.");
-// }
-
 Juego ();
+
+function finalizarJuego () {
+
+    if (puntajeJugador >= 5 && puntajeCPU <= 5) {
+
+        console.log ("El juego ha terminado.");
+        console.log (jugadorGanaJuego);
+        alert ("Juego terminado.");
+    
+    }
+
+    else if (puntajeCPU >= 5 && puntajeJugador <= 5) {
+
+        console.log ("El juego ha terminado.");
+        console.log (CPUGanaJuego);
+        alert ("Juego terminado.");
+
+    }
+    
+}
+
+finalizarJuego ()
+
+
 
