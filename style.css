@@ -1,3 +1,25 @@
 body {
-    background-color: white;
+    font-family: monospace;
+    height: 100vh;
+    background-image: url('https://rare-gallery.com/uploads/posts/4596986-cave-nature-landscape-venezuela-kukenn-tepui-venezuela.jpg');
+    background-size: cover;
+}
+
+/* .row {
+    border: 1px solid red;
+}
+
+.col {
+    border: 1px solid navy;
+} */
+
+.btn {
+
+    font-weight: 600;
+    background-color: snow;
+
+}
+
+.reglas {
+    font-size: smaller;
 }
