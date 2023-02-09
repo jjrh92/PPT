@@ -4,7 +4,7 @@ let puntajeJugador = 0;
 let puntajeCPU = 0;
 let empates = 0;
 
-// Función de simluacion de la jugada del CPU/Computadora. Tomando un valor aleatorio entre 3 opciones disponibles.
+// Función de simulacion de la jugada del CPU/Computadora. Tomando un valor aleatorio entre 3 opciones disponibles.
 
 function JuegaCPU () {
 
