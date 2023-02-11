@@ -1,63 +1,37 @@
-// Comenzamos declarando elementos del DOM.
+// Definiendo elementos del DOM (Botones).
 
-// Scoreboard - Puntaje
+let boton_piedra = document.getElementById ("boton_piedra").addEventListener("click", JugadorEligePiedra);
 
-let puntaje = document.getElementById ("puntaje");
 
-// Opciones del jugador (Piedra, papel ó tijeras)
 
-let jugador_elige_piedra = document.getElementById ("jugador_elige_piedra");
-let jugador_elige_papel = document.getElementById ("jugador_elige_papel");
-let jugador_elige_tijeras = document.getElementById ("jugador_elige_tijeras");
+// Funciones de cada boton (Jugadas).
 
-// Declaramos eventlisteners para el click en los 3 botones.
+function JugadorEligePiedra (CPUElige) {
 
-jugador_elige_piedra.addEventListener ("click", jugadorElige ());
-jugador_elige_papel.addEventListener ("click", jugadorElige ());
-jugador_elige_tijeras.addEventListener ("click", jugadorElige ());
+    CPUElige = CPUJuega ();
+    console.log ("El Humano Elige Piedra.");
 
-// Funciones para elecciones del jugador.
+    if ((CPUElige) === "Piedra") {
 
-function jugadorElige (val) {
-
-    jugador_elige_piedra.onclick = function () {
-
-        console.log ("El jugador ha elegido Piedra")
-        return val = "piedra";
+        console.log (empateRonda);
 
     };
 
-    jugador_elige_papel.onclick = function () {
+    if ((CPUElige) === "Papel") {
 
-        console.log ("El jugador ha elegido Papel")
-        return val = "papel";
-        
+        console.log (CPUGanaRonda);
+
     };
 
-    jugador_elige_tijeras.onclick = function () {
+    if ((CPUElige) === "Tijeras") {
 
-        console.log ("El jugador ha elegido Tijeras")
-        return val = "tijeras";
-        
+        console.log (jugadorGanaRonda);
+
     };
+    console.log ("              ");
 
-}
 
-// Comenzamos declarando variables de Puntaje Global que arrancan en 0.
-
-let puntajeJugador = 0;
-let puntajeCPU = 0;
-let empates = 0;
-
-// Función de simulacion de la jugada del CPU/Computadora. Tomando un valor aleatorio entre 3 opciones disponibles.
-
-function JuegaCPU () {
-
-    let opciones = ["Piedra", "Papel", "Tijeras"];
-    let random = Math.floor (Math.random () * opciones.length);
-    return opciones [random];
-
-}
+};
 
 // Guardamos en variables los mensajes de victoria/derrota/empate para cada ronda.
 
@@ -65,62 +39,14 @@ let jugadorGanaRonda = "El jugador gana esta ronda.";
 let CPUGanaRonda = "El CPU gana esta ronda.";
 let empateRonda = "Esta ronda queda en empate";
 
-// Función de cada ronda del juego, se retorna un mensaje/string guardado previamente en variables definidas en lineas anteriores.
+// Funcion de simulacion de jugada del CPU (Random)
 
-function EmpezarRonda (jugadorElige, seleccionCPU) {
+function CPUJuega () {
 
-    if (jugadorElige == "piedra" && seleccionCPU == "Papel") {
-        
-        return CPUGanaRonda;
-        
-    } 
-    
-    else if (jugadorElige == "piedra" && seleccionCPU == "Piedra") {
+    let opciones = ["Piedra", "Papel", "Tijeras"];
+    let random = Math.floor (Math.random () * opciones.length);
+    console.log ("El Robot Elige " +opciones [random]+ ".");
+    return opciones [random];
 
-        return empateRonda;
+};
 
-    }
-
-    else if (jugadorElige == "piedra" && seleccionCPU == "Tijeras") {
-
-        return jugadorGanaRonda;
-        
-    }
-
-    else if (jugadorElige == "papel" && seleccionCPU == "Papel") {
-
-        return empateRonda;
-
-    }
-
-    else if (jugadorElige == "papel" && seleccionCPU == "Piedra") {
-
-        return jugadorGanaRonda;
-
-    }
-
-    else if (jugadorElige == "papel" && seleccionCPU == "Tijeras") {
-
-        return CPUGanaRonda;
-
-    }
-
-    else if (jugadorElige == "tijeras" && seleccionCPU == "Pïedra") {
-
-        return CPUGanaRonda;
-
-    }
-
-    else if (jugadorElige == "tijeras" && seleccionCPU == "Papel") {
-
-        return jugadorGanaRonda;
-
-    }
-
-    else if (jugadorElige == "tijeras" && seleccionCPU == "Tijeras") {
-
-        return empateRonda;
-
-    }
-    
-}
