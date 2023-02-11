@@ -16,10 +16,7 @@ body {
 .btn {
 
     font-weight: 600;
-    background-color: snow;
+    background-color: white;
+    color: black;
 
-}
-
-.reglas {
-    font-size: smaller;
 }
