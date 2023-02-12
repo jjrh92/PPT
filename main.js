@@ -1,4 +1,6 @@
-// Definiendo elementos del DOM (Espacio para mostrar jugada de CPU.).
+// Inicio
+
+// Definiendo elementos del DOM para la interactividad.
 
 let jugadaCPU = document.getElementById ("jugadaCPU");
 let resultadoRonda = document.getElementById ("resultadoRonda");
@@ -7,13 +9,13 @@ let marcador_CPU = document.getElementById ("marcador_CPU");
 let mostrarEmpates = document.getElementById ("mostrarEmpates");
 let mostrarRondas = document.getElementById ("mostrarRondas");
 
-// Definiendo elementos del DOM (Botones).
+// Definiendo elementos del DOM (Botones que el usuario presiona).
 
 let boton_piedra = document.getElementById ("boton_piedra").addEventListener("click", JugadorEligePiedra);
 let boton_papel = document.getElementById ("boton_papel").addEventListener("click", JugadorEligePapel);
 let boton_tijeras = document.getElementById ("boton_tijeras").addEventListener("click", JugadorEligeTijeras);
 
-// Comenzamos declarando variables de Puntaje Global que arrancan en 0.
+// Comenzamos declarando variables de Puntajes/Rondas/Empates necesarias para la logica del juego.
 
 let puntajeJugador = 1;
 let puntajeCPU = 1;
@@ -40,10 +42,9 @@ function TerminarJuego () {
 
 }
 
-
 // Funciones de cada boton (Jugadas).
 
-// Piedra
+// Sí el jugador elige Piedra.
 
 function JugadorEligePiedra (CPUElige) {
 
@@ -83,7 +84,7 @@ function JugadorEligePiedra (CPUElige) {
 
 };
 
-// Papel
+// Sí el jugador elige Papel.
 
 function JugadorEligePapel (CPUElige) {
 
@@ -123,7 +124,7 @@ function JugadorEligePapel (CPUElige) {
 
 };
 
-// Tijeras
+// Sí el jugador elige Tijeras.
 
 function JugadorEligeTijeras (CPUElige) {
 
@@ -163,10 +164,7 @@ function JugadorEligeTijeras (CPUElige) {
 
 };
 
-
-
-
-// Guardamos en variables los mensajes de victoria/derrota/empate para cada ronda.
+// Guardamos en variables los mensajes de victoria/derrota/empate para cada ronda y asi ahorrar tiempo.
 
 let jugadorGanaRonda = "El jugador gana esta ronda.";
 let CPUGanaRonda = "La IA gana esta ronda.";
@@ -174,7 +172,7 @@ let empateRonda = "Esta ronda queda en empate.";
 let jugadorGanaJuego = "Le has ganado a la IA. Felicitaciones.";
 let CPUGanaJuego = "La IA te ha ganado. Mejor suerte para la proxima.";
 
-// Funcion de simulacion de jugada del CPU (Random)
+// Funcion de simulacion de jugada del CPU (Random).
 
 function CPUJuega () {
 
@@ -185,3 +183,6 @@ function CPUJuega () {
 
 };
 
+// Fin
+
+// v2.0.1.
