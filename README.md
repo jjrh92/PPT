@@ -11,6 +11,12 @@ Visita [Wikipedia](https://en.wikipedia.org/wiki/Rock_paper_scissors) para más 
 ## Imagenes
 Diferentes simulaciones de dispositivos fueron utilizados para comprobar los mediaqueries y la responsividad. 
 
+![mobile](https://user-images.githubusercontent.com/48032098/218287466-ee5f806f-48bb-4e6b-b118-df2125630dc0.png)
+![mobile (1)](https://user-images.githubusercontent.com/48032098/218287469-58d55d2d-7168-4ef3-89b3-51a74f337501.png)
+![mobile (2)](https://user-images.githubusercontent.com/48032098/218287473-166cfe57-453d-462f-8e98-b668b9231250.png)
+![mobile (3)](https://user-images.githubusercontent.com/48032098/218287477-1024fdc0-d6e3-4e14-916d-3361cfe57159.png)
+
+
 
 ## Tecnologias Aplicadas
 
