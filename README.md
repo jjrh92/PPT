@@ -38,11 +38,16 @@ Los Pull Requests seran bienvenidos y revisados.
 
 # Version & Changelog
 
+
 v2.0.1.
 
+```
 Proyecto Visual
+```
 
 v2.1.0.
 
+```
 Se agregan efectos de hover en titulo e imagen de header
 Se agrega version en Ingles.
+```
