@@ -36,6 +36,13 @@ Los Pull Requests seran bienvenidos y revisados.
 
 [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
-# Version
+# Version & Changelog
 
 v2.0.1.
+
+Proyecto Visual
+
+v2.1.0.
+
+Se agregan efectos de hover en titulo e imagen de header
+Se agrega version en Ingles.

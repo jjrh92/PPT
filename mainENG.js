@@ -50,34 +50,34 @@ function JugadorEligePiedra (CPUElige) {
 
     CPUElige = CPUJuega ();
 
-    if ((CPUElige) === "Piedra") {
+    if ((CPUElige) === "Rock") {
 
-        jugadaCPU.innerText = "Piedra ✊"
+        jugadaCPU.innerText = "Rock ✊"
         resultadoRonda.innerText = empateRonda;
-        mostrarEmpates.innerText = empates++ +" Empates.";
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarEmpates.innerText = empates++ +" Ties.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
 
     };
 
-    if ((CPUElige) === "Papel") {
+    if ((CPUElige) === "Paper") {
 
-        jugadaCPU.innerText = "Papel 🖐️"
+        jugadaCPU.innerText = "Paper 🖐️"
         resultadoRonda.innerText = CPUGanaRonda;
         marcador_CPU.innerText = puntajeCPU++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
 
     };
 
-    if ((CPUElige) === "Tijeras") {
+    if ((CPUElige) === "Scissors") {
 
-        jugadaCPU.innerText = "Tijeras ✌️"
+        jugadaCPU.innerText = "Scissors ✌️"
         resultadoRonda.innerText = jugadorGanaRonda;
         marcador_jugador.innerText = puntajeJugador++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
     };
@@ -90,34 +90,34 @@ function JugadorEligePapel (CPUElige) {
 
     CPUElige = CPUJuega ();
 
-    if ((CPUElige) === "Piedra") {
+    if ((CPUElige) === "Rock") {
 
-        jugadaCPU.innerText = "Piedra ✊"
+        jugadaCPU.innerText = "Rock ✊"
         resultadoRonda.innerText = jugadorGanaRonda;
         marcador_jugador.innerText = puntajeJugador++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
 
     };
 
-    if ((CPUElige) === "Papel") {
+    if ((CPUElige) === "Paper") {
 
-        jugadaCPU.innerText = "Papel 🖐️"
+        jugadaCPU.innerText = "Paper 🖐️"
         resultadoRonda.innerText = empateRonda;
-        mostrarEmpates.innerText = empates++ +" Empates.";
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarEmpates.innerText = empates++ +" Ties.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
 
     };
 
-    if ((CPUElige) === "Tijeras") {
+    if ((CPUElige) === "Scissors") {
 
-        jugadaCPU.innerText = "Tijeras ✌️"
+        jugadaCPU.innerText = "Scissors ✌️"
         resultadoRonda.innerText = CPUGanaRonda;
         marcador_CPU.innerText = puntajeCPU++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
     };
@@ -130,34 +130,34 @@ function JugadorEligeTijeras (CPUElige) {
 
     CPUElige = CPUJuega ();
 
-    if ((CPUElige) === "Piedra") {
+    if ((CPUElige) === "Rock") {
 
-        jugadaCPU.innerText = "Piedra ✊"
+        jugadaCPU.innerText = "Rock ✊"
         resultadoRonda.innerText = CPUGanaRonda;
         marcador_CPU.innerText = puntajeCPU++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
 
     };
 
-    if ((CPUElige) === "Papel") {
+    if ((CPUElige) === "Paper") {
 
-        jugadaCPU.innerText = "Papel 🖐️"
+        jugadaCPU.innerText = "Paper 🖐️"
         resultadoRonda.innerText = jugadorGanaRonda;
         marcador_jugador.innerText = puntajeJugador++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
 
     };
 
-    if ((CPUElige) === "Tijeras") {
+    if ((CPUElige) === "Scissors") {
 
-        jugadaCPU.innerText = "Tijeras ✌️"
+        jugadaCPU.innerText = "Scissors ✌️"
         resultadoRonda.innerText = empateRonda;
-        mostrarEmpates.innerText = empates++ +" Empates.";
-        mostrarRondas.innerText = rondas++ +" Rondas.";
+        mostrarEmpates.innerText = empates++ +" Ties.";
+        mostrarRondas.innerText = rondas++ +" Rounds.";
         TerminarJuego ()
 
     };
@@ -166,22 +166,22 @@ function JugadorEligeTijeras (CPUElige) {
 
 // Guardamos en variables los mensajes de victoria/derrota/empate para cada ronda y asi ahorrar tiempo.
 
-let jugadorGanaRonda = "El jugador gana esta ronda.";
-let CPUGanaRonda = "La IA gana esta ronda.";
-let empateRonda = "Esta ronda queda en empate.";
-let jugadorGanaJuego = "Le has ganado a la IA. Felicitaciones.";
-let CPUGanaJuego = "La IA te ha ganado. Mejor suerte para la proxima.";
+let jugadorGanaRonda = "Player wins this round.";
+let CPUGanaRonda = "AI wins this round.";
+let empateRonda = "Tied! Round ends with a Tie!";
+let jugadorGanaJuego = "You have beaten the AI. Congratulations.";
+let CPUGanaJuego = "The AI has beaten you. Better luck next time.";
 
 // Funcion de simulacion de jugada del CPU (Random).
 
 function CPUJuega () {
 
-    let opciones = ["Piedra", "Papel", "Tijeras"];
+    let opciones = ["Rock", "Paper", "Scissors"];
     let random = Math.floor (Math.random () * opciones.length);
-    console.log ("La IA elige " +opciones [random]+ ".");
+    console.log ("AI chooses " +opciones [random]+ ".");
     return opciones [random];
 
-}; 
+};
 
 // Fin
 
