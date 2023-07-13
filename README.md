@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jjrh92/rock-paper-scissors">
-    <img src="https://www.clipartmax.com/png/middle/21-211491_rock-paper-scissors-clipart-rock-paper-scissors-clip-art.png" alt="Logo" width="200" height="200">
+    <img src="https://p7.hiclipart.com/preview/243/115/663/rock-paper-scissors-thumbnail.jpg" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">Welcome - Bienvenid@</h3>
