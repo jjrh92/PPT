@@ -1,101 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPT - por Julio Reyes </title>
-    <link rel="shortcut icon" href="https://www.theodinproject.com/assets/icons/odin-icon-b5b31c073f7417a257003166c98cc23743654715305910c068b93a3bf4d3065d.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hover.css">
-</head>
-<body class="d-flex flex-column min-vh-100">
-
-    <header class="container-fluid d-flex flex-row pt-3 pb-3 justify-content-center align-content-center">
-        <a href="index.html"><img class="logo img-fluid ps-4 hvr-pulse-grow" title="Refrescar la pagina" src="https://www.theodinproject.com/assets/icons/odin-icon-b5b31c073f7417a257003166c98cc23743654715305910c068b93a3bf4d3065d.svg"></a>
-        <div class="container-fluid d-flex flex-row justify-content-center">
-            <a class="text-decoration-none hvr-pulse-grow" href="index.html"><p class="fs-3 text-light fw-bolder" title="Refrescar la pagina">Piedra Papel ó Tijeras</p></a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPT - por Julio Reyes</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.theodinproject.com/assets/icons/odin-icon-b5b31c073f7417a257003166c98cc23743654715305910c068b93a3bf4d3065d.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="hover.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header
+      class="container-fluid d-flex flex-row pt-3 pb-3 justify-content-center align-content-center"
+    >
+      <a href="index.html"
+        ><img
+          class="logo img-fluid ps-4 hvr-pulse-grow"
+          title="Refrescar la pagina"
+          src="https://www.theodinproject.com/assets/icons/odin-icon-b5b31c073f7417a257003166c98cc23743654715305910c068b93a3bf4d3065d.svg"
+      /></a>
+      <div class="container-fluid d-flex flex-row justify-content-center">
+        <a class="text-decoration-none hvr-pulse-grow" href="index.html"
+          ><p class="fs-3 text-light fw-bolder" title="Refrescar la pagina">
+            Piedra Papel ó Tijeras
+          </p></a
+        >
+      </div>
     </header>
 
     <main>
+      <div class="container">
+        <div class="row gx-5">
+          <div
+            class="col-lg-4 col-md-12 jugador d-flex flex-column align-items-center justify-content-center"
+          >
+            <span class="text-light fs-3 pb-1">🧠 Jugador Elige:</span>
+            <div class="d-flex gap-1">
+              <button type="button" id="boton_piedra" class="btn btn-light">
+                Piedra ✊
+              </button>
 
-        <div class="container">
-            <div class="row gx-5">
+              <button type="button" id="boton_papel" class="btn btn-light">
+                Papel 🖐️
+              </button>
 
-              <div class="col-lg-4 col-md-12 jugador d-flex flex-column align-items-center justify-content-center">
-                <span class="text-light fs-3 pb-1">🧠 Jugador Elige:</span>
-                <div class="d-flex gap-1">
-
-                    <button type="button" id="boton_piedra" class="btn btn-light">Piedra ✊</button>
-
-                    <button type="button" id="boton_papel" class="btn btn-light">Papel 🖐️</button>
-
-                    <button type="button" id="boton_tijeras" class="btn btn-light">Tijeras ✌️</button>
-
-                  </div>
-                  <span id="resultadoRonda" class="text-warning pt-2 fs-5 fw-bolder">Esperando Jugada...</span>
-              </div>
-          
-              <div class="col-lg-4 col-md-6 puntaje d-flex flex-column align-items-center justify-content-center">
-
-
-                <span class="text-light fs-3 pb-1">🏁 Puntaje:</span>
-
-                <div>
-
-                    <span id="cerebro" class="text-warning fw-bolder fs-3">🧠</span>
-                    <span id="marcador_jugador" class="text-warning fw-bolder fs-3">0</span>
-
-                    <span class="text-light fw-bolder fs-2">—</span>
-
-                    <span id="marcador_CPU" class="text-danger fw-bolder fs-3">0</span>
-                    <span id="robot" class="text-warning fw-bolder fs-3">🤖</span>
-
-
-
-                </div>
-                <span id="mostrarRondas" class="text-light fs-6 fw-bolder">0 Rondas.</span>
-
-                <span id="mostrarEmpates" class="text-light fs-6 fw-bolder">0 Empates.</span>
-
-              </div>
-          
-              <div class="col-lg-4 col-md-6 cpu d-flex flex-column align-items-center justify-content-center">
-                    <span class="text-light fs-3 pb-1">🤖 IA Elige:</span>
-
-                    <div class="d-flex gap-1" >
-
-                        <span id="jugadaCPU" class="text-danger fw-bolder fs-4 pb-1">Esperando Jugada...</span>
-
-                    </div>
-
-              </div>
-
+              <button type="button" id="boton_tijeras" class="btn btn-light">
+                Tijeras ✌️
+              </button>
             </div>
-
+            <span id="resultadoRonda" class="text-warning pt-2 fs-5 fw-bolder"
+              >Esperando Jugada...</span
+            >
           </div>
 
+          <div
+            class="col-lg-4 col-md-6 puntaje d-flex flex-column align-items-center justify-content-center"
+          >
+            <span class="text-light fs-3 pb-1">🏁 Puntaje:</span>
+
+            <div>
+              <span id="cerebro" class="text-warning fw-bolder fs-3">🧠</span>
+              <span id="marcador_jugador" class="text-warning fw-bolder fs-3"
+                >0</span
+              >
+
+              <span class="text-light fw-bolder fs-2">—</span>
+
+              <span id="marcador_CPU" class="text-danger fw-bolder fs-3"
+                >0</span
+              >
+              <span id="robot" class="text-warning fw-bolder fs-3">🤖</span>
+            </div>
+            <span id="mostrarRondas" class="text-light fs-6 fw-bolder"
+              >0 Rondas.</span
+            >
+
+            <span id="mostrarEmpates" class="text-light fs-6 fw-bolder"
+              >0 Empates.</span
+            >
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 cpu d-flex flex-column align-items-center justify-content-center"
+          >
+            <span class="text-light fs-3 pb-1">🤖 IA Elige:</span>
+
+            <div class="d-flex gap-1">
+              <span id="jugadaCPU" class="text-danger fw-bolder fs-4 pb-1"
+                >Esperando Jugada...</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <span class="text-light fs-6 text-center pt-5">📜 Reglas: Sin importar el numero de rondas jugadas, el primer jugador en llegar a 10 puntos gana la partida.</span>
+    <span class="text-light fs-6 text-center pt-5"
+      >📜 Reglas: Sin importar el numero de rondas jugadas, el primer jugador en
+      llegar a 10 puntos gana la partida.</span
+    >
 
     <span class="text-light fs-6 text-center pt-2">🍀 Buena suerte.</span>
 
-    <footer class="flex-row d-flex justify-content-center gap-2 pt-3 pb-2 mt-auto">
+    <footer
+      class="flex-row d-flex justify-content-center gap-2 pt-3 pb-2 mt-auto"
+    >
+      <a
+        href="https://www.linkedin.com/in/jjrh92/"
+        title="Conectemos en LinkedIn"
+        target="_blank"
+        ><img
+          src="https://i.pinimg.com/originals/ce/09/3c/ce093c7214ad357bb665cfd2f66a8b6b.png"
+          class="iconos_footer hvr-pulse-grow"
+          height="25px"
+          width="25px"
+      /></a>
 
-        <a href="https://www.linkedin.com/in/jjrh92/" title="Conectemos en LinkedIn" target="_blank"><img src="https://i.pinimg.com/originals/ce/09/3c/ce093c7214ad357bb665cfd2f66a8b6b.png" class="iconos_footer hvr-pulse-grow" height="25px" width="25px"></a>
+      <a href="https://github.com/jjrh92/rock-paper-scissors" target="_blank"
+        ><img
+          src="https://img.icons8.com/stickers/500/null/github.png"
+          class="iconos_footer hvr-pulse-grow"
+          title="Repositorio en Github"
+          height="25px"
+          width="25px"
+      /></a>
 
-        <a href="https://github.com/jjrh92/PPT" target="_blank"><img src="https://img.icons8.com/stickers/500/null/github.png" class="iconos_footer hvr-pulse-grow" title="Repositorio en Github" height="25px" width="25px"></a>
+      <a href="https://discordapp.com/users/125683846506086400" target="_blank"
+        ><img
+          src="https://img.icons8.com/color/48/null/discord-logo.png"
+          title="Conectemos en Discord"
+          class="iconos_footer hvr-pulse-grow"
+          height="25px"
+          width="25px"
+      /></a>
 
-        <a href="https://discordapp.com/users/125683846506086400" target="_blank"><img src="https://img.icons8.com/color/48/null/discord-logo.png" title="Conectemos en Discord" class="iconos_footer hvr-pulse-grow" height="25px" width="25px"></a>
+      <a href="https://t.me/jjrh92" target="_blank"
+        ><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
+          title="Conectemos en Telegram"
+          class="iconos_footer hvr-pulse-grow"
+          height="25px"
+          width="25px"
+      /></a>
 
-        <a href="https://t.me/jjrh92" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" title="Conectemos en Telegram" class="iconos_footer hvr-pulse-grow" height="25px" width="25px"></a>
-
-        <a class="hvr-pulse-grow" href="indexENG.html"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" title="Versión en Ingles" class="hvr-pulse-grow" height="25px" width="25px"></a>
+      <a class="hvr-pulse-grow" href="indexENG.html"
+        ><img
+          src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png"
+          title="Versión en Ingles"
+          class="hvr-pulse-grow"
+          height="25px"
+          width="25px"
+      /></a>
     </footer>
-    
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
