@@ -2,14 +2,14 @@
 
 <div align="center">
 
-![GitHub contributors](https://img.shields.io/github/contributors/jjrh92/rock-paper-scissors)
-![GitHub Repo stars](https://img.shields.io/github/stars/jjrh92/rock-paper-scissors)
-![GitHub issues](https://img.shields.io/github/issues-raw/jjrh92/rock-paper-scissors)
+![GitHub contributors](https://img.shields.io/github/contributors/jjrh92/RPS)
+![GitHub Repo stars](https://img.shields.io/github/stars/jjrh92/RPS)
+![GitHub issues](https://img.shields.io/github/issues-raw/jjrh92/RPS)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/jjrh92/rock-paper-scissors">
+  <a href="https://github.com/jjrh92/RPS">
     <img src="https://www.telegraph.co.uk/multimedia/archive/03015/RockPaperScissors_3015010b.jpg?imwidth=1280" alt="Logo" width="200" height="200">
   </a>
 
@@ -19,11 +19,11 @@
     Rock Paper Scissors - Piedra Papel ó Tijeras
     <br />
     <br />
-    <a href="https://jjrh92.github.io/rock-paper-scissors/">View Demo - Ver Demo</a>
+    <a href="https://rps.julioreyes.dev/">View Demo - Ver Demo</a>
     ·
-    <a href="https://github.com/jjrh92/rock-paper-scissors/issues">Report Bug - Reportar Bug</a>
+    <a href="https://github.com/jjrh92/RPS/issues">Report Bug - Reportar Bug</a>
     ·
-    <a href="https://github.com/jjrh92/rock-paper-scissors/issues">Request Feature - Pedir Feature</a>
+    <a href="https://github.com/jjrh92/RPS/issues">Request Feature - Pedir Feature</a>
   </p>
 </div>
 
@@ -51,7 +51,7 @@ Install the project locally - Instalar el proyecto localmente.
 
 Clone the repo
    ```sh
-   git clone https://github.com/jjrh92/rock-paper-scissors.git
+   git clone https://github.com/jjrh92/RPS.git
    ```
 
 <!-- USAGE EXAMPLES -->

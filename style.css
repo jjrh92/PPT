@@ -1,8 +1,8 @@
 body {
-    font-family: monospace;
-    height: 100.1vh;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/Kukenan_Tepuy.jpg');
-    background-size: cover;
+  font-family: monospace;
+  height: 100.1vh;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/Kukenan_Tepuy.jpg");
+  background-size: cover;
 }
 
 /* .row {
@@ -14,11 +14,9 @@ body {
 } */
 
 .btn {
-
-    font-weight: 600;
-    background-color: white;
-    color: black;
-
+  font-weight: 600;
+  background-color: white;
+  color: black;
 }
 
 /* v2.1.0. */

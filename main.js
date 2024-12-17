@@ -2,18 +2,24 @@
 
 // Definiendo elementos del DOM para la interactividad.
 
-let jugadaCPU = document.getElementById ("jugadaCPU");
-let resultadoRonda = document.getElementById ("resultadoRonda");
-let marcador_jugador = document.getElementById ("marcador_jugador");
-let marcador_CPU = document.getElementById ("marcador_CPU");
-let mostrarEmpates = document.getElementById ("mostrarEmpates");
-let mostrarRondas = document.getElementById ("mostrarRondas");
+let jugadaCPU = document.getElementById("jugadaCPU");
+let resultadoRonda = document.getElementById("resultadoRonda");
+let marcador_jugador = document.getElementById("marcador_jugador");
+let marcador_CPU = document.getElementById("marcador_CPU");
+let mostrarEmpates = document.getElementById("mostrarEmpates");
+let mostrarRondas = document.getElementById("mostrarRondas");
 
 // Definiendo elementos del DOM (Botones que el usuario presiona).
 
-let boton_piedra = document.getElementById ("boton_piedra").addEventListener("click", JugadorEligePiedra);
-let boton_papel = document.getElementById ("boton_papel").addEventListener("click", JugadorEligePapel);
-let boton_tijeras = document.getElementById ("boton_tijeras").addEventListener("click", JugadorEligeTijeras);
+let boton_piedra = document
+  .getElementById("boton_piedra")
+  .addEventListener("click", JugadorEligePiedra);
+let boton_papel = document
+  .getElementById("boton_papel")
+  .addEventListener("click", JugadorEligePapel);
+let boton_tijeras = document
+  .getElementById("boton_tijeras")
+  .addEventListener("click", JugadorEligeTijeras);
 
 // Comenzamos declarando variables de Puntajes/Rondas/Empates necesarias para la logica del juego.
 
@@ -22,147 +28,107 @@ let puntajeCPU = 1;
 let rondas = 1;
 let empates = 1;
 
-function TerminarJuego () {
-
-    if (puntajeJugador >= 11 && puntajeCPU < 11 ) {
-
-
-        alert (jugadorGanaJuego);
-        location.reload();
-
-    } 
-
-    else if (puntajeCPU >= 11 && puntajeJugador < 11 ) {
-
-
-        alert (CPUGanaJuego);
-        location.reload();
-
-    } 
-
+function TerminarJuego() {
+  if (puntajeJugador >= 11 && puntajeCPU < 11) {
+    alert(jugadorGanaJuego);
+    location.reload();
+  } else if (puntajeCPU >= 11 && puntajeJugador < 11) {
+    alert(CPUGanaJuego);
+    location.reload();
+  }
 }
 
 // Funciones de cada boton (Jugadas).
 
 // Sí el jugador elige Piedra.
 
-function JugadorEligePiedra (CPUElige) {
+function JugadorEligePiedra(CPUElige) {
+  CPUElige = CPUJuega();
 
-    CPUElige = CPUJuega ();
+  if (CPUElige === "Piedra") {
+    jugadaCPU.innerText = "Piedra ✊";
+    resultadoRonda.innerText = empateRonda;
+    mostrarEmpates.innerText = empates++ + " Empates.";
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
 
-    if ((CPUElige) === "Piedra") {
+  if (CPUElige === "Papel") {
+    jugadaCPU.innerText = "Papel 🖐️";
+    resultadoRonda.innerText = CPUGanaRonda;
+    marcador_CPU.innerText = puntajeCPU++;
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
 
-        jugadaCPU.innerText = "Piedra ✊"
-        resultadoRonda.innerText = empateRonda;
-        mostrarEmpates.innerText = empates++ +" Empates.";
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-
-    };
-
-    if ((CPUElige) === "Papel") {
-
-        jugadaCPU.innerText = "Papel 🖐️"
-        resultadoRonda.innerText = CPUGanaRonda;
-        marcador_CPU.innerText = puntajeCPU++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-
-    };
-
-    if ((CPUElige) === "Tijeras") {
-
-        jugadaCPU.innerText = "Tijeras ✌️"
-        resultadoRonda.innerText = jugadorGanaRonda;
-        marcador_jugador.innerText = puntajeJugador++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-    };
-
-};
+  if (CPUElige === "Tijeras") {
+    jugadaCPU.innerText = "Tijeras ✌️";
+    resultadoRonda.innerText = jugadorGanaRonda;
+    marcador_jugador.innerText = puntajeJugador++;
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
+}
 
 // Sí el jugador elige Papel.
 
-function JugadorEligePapel (CPUElige) {
+function JugadorEligePapel(CPUElige) {
+  CPUElige = CPUJuega();
 
-    CPUElige = CPUJuega ();
+  if (CPUElige === "Piedra") {
+    jugadaCPU.innerText = "Piedra ✊";
+    resultadoRonda.innerText = jugadorGanaRonda;
+    marcador_jugador.innerText = puntajeJugador++;
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
 
-    if ((CPUElige) === "Piedra") {
+  if (CPUElige === "Papel") {
+    jugadaCPU.innerText = "Papel 🖐️";
+    resultadoRonda.innerText = empateRonda;
+    mostrarEmpates.innerText = empates++ + " Empates.";
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
 
-        jugadaCPU.innerText = "Piedra ✊"
-        resultadoRonda.innerText = jugadorGanaRonda;
-        marcador_jugador.innerText = puntajeJugador++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-
-    };
-
-    if ((CPUElige) === "Papel") {
-
-        jugadaCPU.innerText = "Papel 🖐️"
-        resultadoRonda.innerText = empateRonda;
-        mostrarEmpates.innerText = empates++ +" Empates.";
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-
-    };
-
-    if ((CPUElige) === "Tijeras") {
-
-        jugadaCPU.innerText = "Tijeras ✌️"
-        resultadoRonda.innerText = CPUGanaRonda;
-        marcador_CPU.innerText = puntajeCPU++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-    };
-
-};
+  if (CPUElige === "Tijeras") {
+    jugadaCPU.innerText = "Tijeras ✌️";
+    resultadoRonda.innerText = CPUGanaRonda;
+    marcador_CPU.innerText = puntajeCPU++;
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
+}
 
 // Sí el jugador elige Tijeras.
 
-function JugadorEligeTijeras (CPUElige) {
+function JugadorEligeTijeras(CPUElige) {
+  CPUElige = CPUJuega();
 
-    CPUElige = CPUJuega ();
+  if (CPUElige === "Piedra") {
+    jugadaCPU.innerText = "Piedra ✊";
+    resultadoRonda.innerText = CPUGanaRonda;
+    marcador_CPU.innerText = puntajeCPU++;
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
 
-    if ((CPUElige) === "Piedra") {
+  if (CPUElige === "Papel") {
+    jugadaCPU.innerText = "Papel 🖐️";
+    resultadoRonda.innerText = jugadorGanaRonda;
+    marcador_jugador.innerText = puntajeJugador++;
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
 
-        jugadaCPU.innerText = "Piedra ✊"
-        resultadoRonda.innerText = CPUGanaRonda;
-        marcador_CPU.innerText = puntajeCPU++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-
-    };
-
-    if ((CPUElige) === "Papel") {
-
-        jugadaCPU.innerText = "Papel 🖐️"
-        resultadoRonda.innerText = jugadorGanaRonda;
-        marcador_jugador.innerText = puntajeJugador++;
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-
-    };
-
-    if ((CPUElige) === "Tijeras") {
-
-        jugadaCPU.innerText = "Tijeras ✌️"
-        resultadoRonda.innerText = empateRonda;
-        mostrarEmpates.innerText = empates++ +" Empates.";
-        mostrarRondas.innerText = rondas++ +" Rondas.";
-        TerminarJuego ()
-
-    };
-
-};
+  if (CPUElige === "Tijeras") {
+    jugadaCPU.innerText = "Tijeras ✌️";
+    resultadoRonda.innerText = empateRonda;
+    mostrarEmpates.innerText = empates++ + " Empates.";
+    mostrarRondas.innerText = rondas++ + " Rondas.";
+    TerminarJuego();
+  }
+}
 
 // Guardamos en variables los mensajes de victoria/derrota/empate para cada ronda y asi ahorrar tiempo.
 
@@ -174,14 +140,12 @@ let CPUGanaJuego = "La IA te ha ganado. Mejor suerte para la proxima.";
 
 // Funcion de simulacion de jugada del CPU (Random).
 
-function CPUJuega () {
-
-    let opciones = ["Piedra", "Papel", "Tijeras"];
-    let random = Math.floor (Math.random () * opciones.length);
-    console.log ("La IA elige " +opciones [random]+ ".");
-    return opciones [random];
-
-}; 
+function CPUJuega() {
+  let opciones = ["Piedra", "Papel", "Tijeras"];
+  let random = Math.floor(Math.random() * opciones.length);
+  console.log("La IA elige " + opciones[random] + ".");
+  return opciones[random];
+}
 
 // Fin
 
